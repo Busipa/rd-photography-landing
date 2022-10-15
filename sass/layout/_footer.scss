@@ -33,24 +33,24 @@
                 }
             }
             &--2 {
-                background-image: url(../../img/inst-bar-2.jpg);
+                background-image: url(../img/inst-bar-2.jpg);
 
             }
             &--3 {
-                background-image: url(../../img/inst-bar-3.jpg);
+                background-image: url(../img/inst-bar-3.jpg);
             }
             &--4 {
-                background-image: url(../../img/inst-bar-4.jpg);
+                background-image: url(../img/inst-bar-4.jpg);
             }
             &--5 {
-                background-image: url(../../img/inst-bar-5.jpg);
+                background-image: url(../img/inst-bar-5.jpg);
 
                 @include respond(phone) {
                     display: none;
                 }
             }
             &--6 {
-                background-image: url(../../img/inst-bar-6.jpg);
+                background-image: url(../img/inst-bar-6.jpg);
 
                 @include respond(phone) {
                     display: none;
