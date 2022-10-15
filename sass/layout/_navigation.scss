@@ -1,0 +1,239 @@
+.nav {
+    @include overlay; 
+
+    &__container {
+        padding: 0;
+        margin: 0 auto;
+        width: 80%;
+
+        @include respond(big-desktop) {
+            width: 70%;
+        }
+    
+        @include respond(tab-land) {
+            width: 90%;
+        }
+        @include respond(tab-port) {
+            width: 95%;
+        }
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
+
+    &__wrap{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        height: 10.7rem;
+    }
+
+    // &__wrap .menu {
+
+    //     @include respond(tab-port) {
+    //         display: none;
+    //     }
+    //     @include respond(phone) {
+    //         display: none;
+    //     }
+   
+    // }
+
+    &__link {
+        color: var(--white);
+
+        &:hover {
+            color:var(--clay);
+            transition: 0.3s ease-in-out;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        
+        @include respond(tab-port) {
+            display: none;
+        }
+        @include respond(phone) {
+            display: none;
+        }
+    }
+
+    &__brand {
+        align-self: center;
+
+        @include respond(phone) {
+            margin: 1rem 6rem;
+        }
+    }
+
+    &__logo {
+        @include respond(tab-port) {
+            width: 8rem;
+            height: 8rem;
+        }
+
+        @include respond(phone) {
+            width: 6rem;
+            height: 6rem;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 5rem;
+        }
+    }
+}
+
+.hamb {
+
+    // display: flex;
+    // align-items: center;
+
+
+    display: none;
+    @include respond(big-desktop) {
+        display: none;
+    }
+    @include respond(tab-land) {
+        display: none;
+    }
+
+    @include respond(tab-port) {
+        display: flex;
+        align-items: center;
+    }
+
+    @include respond(phone) {
+        display: flex;
+        align-items: center;
+    }
+
+    &__field {
+        padding: 1rem 2rem;
+        cursor: pointer;
+
+        @include respond(phone) {
+            padding: 1rem 6rem;
+        }
+    }
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 0, 0, 0.61);
+    z-index: 100;
+    transition: .3s;
+
+    @include respond(big-desktop) {
+        display: none;
+    }
+    @include respond(tab-land) {
+        display: none;
+    }
+
+    @include respond(tab-port) {
+        display: flex;
+        top: 85.59px;
+        bottom: 85.59px;
+    }
+
+    @include respond(phone) {
+        display: flex;
+        top: 78.75px;
+        bottom: 78.75px;
+    }
+}
+
+
+.bar {
+    display: none;
+    height: 4px;
+    background-color: var(--biscuits);
+    transition: .2s;
+
+    @include respond(tab-port) {
+        display: block;
+        width: 6rem;
+        margin: 1.4rem auto;
+
+        
+    }
+    @include respond(phone) {
+        display: block;
+        width: 5rem;
+        margin: 1rem auto;
+        height: 3px;
+    }
+}
+
+.open {
+    right: 0;
+}
+
+.popup .mobile-menu {
+    @include respond(tab-port) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+
+    @include respond(phone) {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.mobile-menu {
+    display: none;
+    padding: 3rem 0;
+    font-size: 5rem;
+    text-align: center;
+    letter-spacing: 5px;
+    
+
+    &__item {
+        margin-bottom: 10vh;
+    }
+
+    &__link {
+        color: var(--white);
+        box-shadow:rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        // background-color: rgba(30, 0, 0, 0.61);
+        padding: 2rem 5rem;
+
+        &:hover {
+            color:var(--clay);
+            transition: 0.3s ease-in-out;
+        }
+    }
+}
+
+
+.hamb__field.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamb__field.active .bar:nth-child(1) {
+    transform: translateY(11px) rotate(50deg);
+    z-index: 200;
+  }
+  .hamb__field.active .bar:nth-child(3) {
+    transform: translateY(-19px) rotate(-49deg);
+    z-index: 200;
+
+    @include respond(phone) {
+        transform: translateY(-10px) rotate(-49deg);
+    }
+  }

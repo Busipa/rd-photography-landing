@@ -1,0 +1,18 @@
+
+/* COLOR PALETTE */
+
+:root {
+    --dark-chocolate-no-sugar: #1E0000;
+    --wine: #4F0804;
+    --clay: #9D3220;
+    --dusty-rose: #BC6C51;
+    --biscuits: #EBB29E;
+    --white: #fff;
+  }
+
+  @mixin overlay {
+    height: 10.7rem;
+    width: 100%;
+    background-color: rgba(30, 0, 0, 0.61);
+    z-index: 3;
+}

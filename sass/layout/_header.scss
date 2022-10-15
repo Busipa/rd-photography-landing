@@ -1,0 +1,132 @@
+.header--home {
+    position: relative;
+    background-image: url(../../img/hero.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.75;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    &__contacts {
+        @include overlay;
+
+        font-size: 1.6rem;
+        position: absolute;
+        bottom: 0;
+
+        &--email {
+            @include respond(phone){
+                display: none;
+            }
+        }
+
+        &-content {
+            width: 80%;
+            height: 10.7rem;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include respond(phone){
+                flex-direction: column;
+                justify-content: space-around;
+            }
+        }
+
+        &-item {
+            color: var(--white);
+            &:hover{
+                color:var(--dusty-rose);
+                transition: 0.3s ease-in-out;
+            }    
+        }
+    }
+
+    svg {
+        &:hover{
+        color:var(--clay);
+        transition: 0.3s ease-in-out;
+    } 
+}   
+
+    &__social {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5rem;
+        margin-top: 15%;
+        margin-right: 10%;
+
+        @include respond(tab-port) {
+            display: none;
+        }
+
+        @include respond(phone){
+            display: none;
+        }
+
+       
+
+        &__icons {
+            align-items: center;
+            
+        }
+    }
+    
+}
+
+.presentation {
+    // position: relative;
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+
+    // display: flex;
+    // flex-direction: row;
+    // align-content: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+   
+    &__title {
+        @include title;
+        color: var(--dusty-rose);
+        font-size: 6rem;
+
+        &:hover {
+            letter-spacing: 0.08rem;
+            transition: 0.3s ease-in-out;
+        }
+
+        @include respond(phone) {
+            font-size: 3rem;
+        }
+    }
+
+    &__subtitle {
+        @include main-typography;
+        letter-spacing: 0.375rem;
+        color: var(--biscuits);
+        font-size: 2.5rem;
+        margin-bottom: 7rem;
+
+        &:hover {
+            letter-spacing: 0.25rem;
+            transition: 0.3s ease-in-out;
+        }
+
+        @include respond(phone) {
+            font-size: 2rem;
+        }
+
+    }
+}
+

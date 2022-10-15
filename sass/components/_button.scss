@@ -1,0 +1,15 @@
+.btn {
+        color: #fff;
+        background-color: var(--wine);
+        letter-spacing: 0.3rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 3rem;
+        padding: 2rem 5.8rem;
+
+        @include respond(phone) {
+                font-size: 2rem;
+                padding: 1.8rem 4rem;
+        }
+}
